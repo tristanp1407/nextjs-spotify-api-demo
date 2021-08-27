@@ -13,13 +13,15 @@ export const Track = ({ track }: any) => {
         {track.name}
       </a>
       <Container>
-        <Image
-          src={track.album.images[0].url}
-          height={track.album.images[0].height}
-          width={track.album.images[0].width}
-          alt={track.name}
-          layout={"responsive"}
-        />
+        {track.album.images[0].url && (
+          <Image
+            src={track.album.images[0].url}
+            height={track.album.images[0].height}
+            width={track.album.images[0].width}
+            alt={track.name}
+            layout={"responsive"}
+          />
+        )}
       </Container>
     </li>
   );
