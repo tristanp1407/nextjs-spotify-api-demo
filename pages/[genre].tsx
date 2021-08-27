@@ -2,11 +2,11 @@ import { GetStaticProps } from "next";
 import Head from "next/head";
 import Track from "../components/Tracks/Tracks";
 
-const Genre = (props: any) => {
-  const capsFirstLetter = (str: string) => {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  };
+export const capsFirstLetter = (str: string) => {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+};
 
+const Genre = (props: any) => {
   return (
     <div>
       <Head>

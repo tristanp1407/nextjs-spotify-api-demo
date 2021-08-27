@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Link from "next/link";
+import { capsFirstLetter } from "./[genre]";
 
 import Head from "next/head";
 
@@ -18,7 +19,7 @@ const Home = (props: any) => {
         return (
           <ul key={genre}>
             <Link href={`/${genre}`}>
-              <a>{genre}</a>
+              <a>{capsFirstLetter(genre)}</a>
             </Link>
           </ul>
         );
