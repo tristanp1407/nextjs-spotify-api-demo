@@ -17,11 +17,13 @@ const Home = (props: any) => {
 
       {genres.map((genre: string) => {
         return (
-          <ul key={genre}>
-            <Link href={`/${genre}`}>
-              <a>{capsFirstLetter(genre)}</a>
-            </Link>
-          </ul>
+          genre && (
+            <ul key={genre}>
+              <Link href={`/${genre}`}>
+                <a>{capsFirstLetter(genre)}</a>
+              </Link>
+            </ul>
+          )
         );
       })}
     </div>
