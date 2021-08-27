@@ -16,11 +16,12 @@ const Genre = (props: any) => {
       </Head>
 
       <h1>{capsFirstLetter(props.genre)}</h1>
-      {props.tracks.map((track: any) => {
-        if (track.preview_url) {
-          return <Track track={track}></Track>;
-        }
-      })}
+      {props.tracks &&
+        props.tracks.map((track: any) => {
+          if (track.preview_url) {
+            return <Track track={track}></Track>;
+          }
+        })}
     </div>
   );
 };
